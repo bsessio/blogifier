@@ -1,0 +1,23 @@
+{
+  "name": "cl-word-guess",
+  "version": "1.0.0",
+  "description": "cli word guess game",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "cl-word-guess"
+  },
+  "keywords": [
+    "homework"
+  ],
+  "author": "bowie sessions",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.2.2",
+    "is-letter": "^1.1.1",
+    "random-words": "^1.1.0"
+  }
+}
