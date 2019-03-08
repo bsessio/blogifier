@@ -1,0 +1,26 @@
+{
+  "name": "blogify",
+  "version": "1.0.0",
+  "description": "Excitingly redundant blog site",
+  "main": "index.js",
+  "scripts": {
+    "test": "Blog away"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bsessio/blogifier.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Team Persian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsessio/blogifier/issues"
+  },
+  "homepage": "https://github.com/bsessio/blogifier#readme",
+  "dependencies": {
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.43.0"
+  }
+}
