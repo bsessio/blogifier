@@ -1,4 +1,2 @@
-INSERT INTO burgers (burger_name)
-VALUES ("Juicy Lucy"),
-("Big Mac"),
-("Whopper");
+INSERT INTO user (name, location, password, blogPost)
+VALUES ("Creek", "Minnesota", "tango", "I really like posting random things."),
