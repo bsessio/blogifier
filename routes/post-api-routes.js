@@ -7,11 +7,19 @@ module.exports = function(app) {
 
     //get all the posts
     app.get("/api/posts/", function(req, res) {
-        db.Post.findAll({})
-          .then(function(dbPost) {
+      var query = {};
+      if (req.query.author_id) {
+        query.AuthorId = req.query.author_id;
+      }   
+      
+      db.Post.findAll({
+        include: [{model:db.User}],
+        where: query
+      })
+      .then(function(dbPost) {
             res.json(dbPost);
-          });
       });
+  });
     //api route for saving a new post.
     app.post("/api/posts", function(req, res) {
         console.log(req.body);
