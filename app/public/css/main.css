@@ -1,5 +1,71 @@
+button, .blogHeader {
+    background-color: #699CE9;
+    font-weight: bold;
+    color: white;
+    font-size: 1.25vw;
+    text-shadow: 1px 1px 3px rgb(53, 87, 105);
+  }
+  
+  button,
+  input,
+  textarea,
+  .blogHeader,
+  .blogBody,
+  .formHandler {
+    -webkit-box-shadow: 0 4px 4px -2px #1f4f85;
+    -moz-box-shadow: 0 4px 4px -2px #1f4f85;
+    box-shadow: 0 4px 4px -2px #1f4f85;
+  }
+  
+  .blogAuthor,
+  .blogAuthorLocation {
+    text-align: right;
+  }
+  
+  .return, .formHandler  {
+    text-align: center;
+  }
+  
+  .blogBody,
+  .formHandler {
+    background-color: rgb(213, 238, 255);
+  }
+  
+  .newsFeed, input, .formHandler {
+      margin: 0 auto;
+  }
+
 body {
   background: rgb(176, 221, 250);
+}
+
+button {
+  border-radius: 1vw;
+  width: 10vw;
+  height: 4.5vw;
+}
+
+input {
+  border-radius: 0.5vw;
+  width: 50%;
+  height: 1.5vw;
+}
+
+textarea {
+  border-radius: 2vw;
+  margin: 1vw auto;
+  display: block;
+  width: 100%;
+  min-height: 75vh;
+}
+
+label {
+  display: inline-block;
+  margin: 0.25vw;
+}
+
+a {
+  text-decoration: none;
 }
 
 .blogSide {
@@ -7,41 +73,26 @@ body {
   top: 0.5vw;
   right: 5.5vw;
   width: 10%;
-  background:  rgb(213, 238, 255);
+  background: rgb(213, 238, 255);
   padding: 1vw;
   margin-left: 1vw;
   height: 94.5%;
   border-radius: 1vw;
 }
+
 .newsFeed {
   width: 90%;
-  margin: 0 auto;
 }
 
 .blogPost {
-  float: left;
   width: 85%;
-  position: relative;
 }
 
 .blogHeader {
   border-radius: 1vw 1vw 0 0;
-  background-color: rgb(92, 156, 240);
   padding: 1vw 1vw 2vw 1vw;
   margin-bottom: 0.5vw;
   font-size: 1.5vw;
-  font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px 3px rgb(53, 87, 105);
-  -webkit-box-shadow: 0 4px 4px -2px #1f4f85;
-   -moz-box-shadow: 0 4px 4px -2px #1f4f85;
-        box-shadow: 0 4px 4px -2px #1f4f85;
-}
-
-.blogAuthor,
-.blogAuthorLocation {
-  position: relative;
-  text-align: right;
 }
 
 .blogAuthor {
@@ -53,35 +104,29 @@ body {
 }
 
 .blogBody {
-  /* clear: both; */
   padding: 3vw;
   border-radius: 0 0 2vw 2vw;
-  background-color: rgb(213, 238, 255);
   margin-bottom: 4vw;
-  -webkit-box-shadow: 0 4px 4px -2px #1f4f85;
-   -moz-box-shadow: 0 4px 4px -2px #1f4f85;
-        box-shadow: 0 4px 4px -2px #1f4f85;
 }
 
 .logo {
-    width: 50vw;
-}
-
-button {
-    width: 10vw;
-    height: 4.5vw;
-    background-color:  rgb(92, 156, 240);
-  font-weight: bold;
-  color: white;
-  font-size: 1.25vw;
-  text-shadow: 1px 1px 3px rgb(53, 87, 105);
+  width: 50vw;
 }
 
 .credits {
-    bottom: 0;
-    position: absolute;
-    font-size: .75vw;
-    padding: 1vw 1vw 0vw 0vw;
-    color: rgb(100, 99, 99);
+  bottom: 0;
+  position: absolute;
+  font-size: 0.75vw;
+  padding: 1vw 1vw 0vw 0vw;
+  color: rgb(100, 99, 99);
 }
 
+.formHandler {
+  width: 65%;
+  padding: 1vw 3vw;
+  border-radius: 2vw;
+}
+
+.spacer {
+  height: 1vw;
+}
