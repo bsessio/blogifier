@@ -9,11 +9,7 @@ module.exports = function (sequelize, DataTypes) {
             type: STRING,
             allowNull: FALSE,
         },
-        password: {
-            type: PASSWORD,
-            allowNull: FALSE,
-        },
-
+////doesn't need password here
         blogPost: {
             type: TEXT,
             allowNull: FALSE,
@@ -23,3 +19,5 @@ module.exports = function (sequelize, DataTypes) {
     // Don't forget to 'return' the post after defining
     return Post;
 };
+//define foreign key to point to user model.. what user id posted the model
+///user model username: 
