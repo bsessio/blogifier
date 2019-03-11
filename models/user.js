@@ -1,4 +1,5 @@
-var bcrypt=require("bcrypt-nodejs")
+var bcrypt = require("bcrypt-nodejs");
+
 module.exports = function(sequelize, DataTypes) {
   var User=sequelize.define("User",{
     username:{
@@ -11,10 +12,10 @@ module.exports = function(sequelize, DataTypes) {
         required:true,
     }
   })
-  User.methods.hashPassword=function(password){
+  User.hashPassword = function(password){
     return bcrypt.hashSync(password,bcrypt.genSaltSync(10))
   }
-  User.methods.comparePassword=function(password,hash){
+  User.comparePassword=function(password,hash){
     return bcrypt.compareSync(password,hash)
   }
   
@@ -26,6 +27,6 @@ module.exports = function(sequelize, DataTypes) {
       });
   };
   
-    return user;
+    return User;
   };
   
