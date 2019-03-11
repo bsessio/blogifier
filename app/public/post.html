@@ -7,19 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
     <!-- <script src="main.js"></script> -->
+    <link rel="icon" href="images/favicon.ico" sizes="16x16" type="image/png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/main.css"
+    />
 </head>
 <body>
+        <div style="text-align: center">
+                <img class="logo" src="images/bloglogo-bright.png"/>
+              </div>
+    <div class="newsFeed">
     <div class="formHandler">
-        <form action="blogPost">
-            <label for="name">Your name:</label>
+        <form action="blogPost" id="postForm">
+            <label for="name">Full name / username:</label>
             <input type="text" id="name" name="name" placeholder="First and last name, or username">
-            <label for="name">Your address:</label>
+            <div class="spacer"></div>
+            <label for="name">City/State or Country:</label>
             <input type="text" id="address" name="address" placeholder="City and state, or country">
-            <label for="name">Blog Post:</label>
             <textarea type="text" id="blog" name="blog" placeholder="Record your thoughts here">
 
             </textarea>
         </form>
+
+<button type="submit" form="postForm" value="Submit">Submit</button>
     </div>
+    <div class="blogSide">
+        <div class="return">
+            <a href="index.html">Return to the Blogfeed</a>
+        </div>
+              <div class="credits"><p>Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick, Jonathan Hernandez, Tasha Shrader, Nick Arnold, and Drew Brooksbank.</p><p>Blogifier is powered by MySQL and Passport.</p></div>
+            </div>      
+</div>
 </body>
 </html>

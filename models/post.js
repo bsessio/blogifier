@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     // Add code here to create a Post model
-    const Post = sequelize.define("user", {
+    const Post = sequelize.define("Post", {
         name: {
             type: STRING,
             allowNull: FALSE,
