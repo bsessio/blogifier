@@ -10,8 +10,7 @@ module.exports = function(app) {
       var query = {};
       if (req.query.author_id) {
         query.AuthorId = req.query.author_id;
-      }   
-      
+      }       
       db.Post.findAll({
         include: [{model:db.User}],
         where: query
@@ -25,6 +24,7 @@ module.exports = function(app) {
         console.log(req.body);
         db.Post.create({
           name: req.body.name,
+          userId: user,
           location: req.body.location,
           blogPost: req.body.blogPost
         })

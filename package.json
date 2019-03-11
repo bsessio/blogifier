@@ -4,7 +4,8 @@
   "description": "Excitingly redundant blog site",
   "main": "index.js",
   "scripts": {
-    "test": "Blog away"
+    "test": "Blog away",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
     "express-handlebars": "^3.0.2",
     "handlebars": "^4.1.0",
     "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
     "sequelize": "^4.43.0"
-  }
+  },
+  "devDependencies": {}
 }
