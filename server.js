@@ -16,9 +16,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-require("./routes/api_routes")(app);
-require("./routes/api_routes.js")(app);
-require("./routes/post-api-routes")(app);
+require("./routes/html_routes.js")(app);
+require("./routes/user-api_routes.js")(app);
+require("./routes/post-api-routes.js")(app);
 
 
 // Start our server so that it can begin listening to client requests.
