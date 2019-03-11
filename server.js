@@ -1,4 +1,6 @@
 const express = require("express");
+var passport=require("passport");
+var session=require("express-session")
 const PORT = process.env.PORT || 8080;
 const app = express();
 
@@ -8,7 +10,8 @@ app.use(express.static("public"));
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(passport.initialize())
+app.use(passport.session())
 // Set Handlebars.
 const exphbs = require("express-handlebars");
 
@@ -19,6 +22,7 @@ app.set("view engine", "handlebars");
 require("./routes/api_routes")(app);
 require("./routes/api_routes.js")(app);
 require("./routes/post-api-routes")(app);
+require("./routes/auth")(passport)
 
 
 // Start our server so that it can begin listening to client requests.
