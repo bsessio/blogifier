@@ -16,9 +16,10 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-const routes = require("./controllers/blog_controllers.js");
+require("./routes/api_routes")(app);
+require("./routes/api_routes.js")(app);
+require("./routes/post-api-routes")(app);
 
-app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
