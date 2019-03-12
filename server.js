@@ -3,6 +3,7 @@ const express = require("express");
 var passport=require("passport");
 var session=require("express-session")
 var cookieParser=require('cookie-parser')
+var db=require("./models");
 const PORT = process.env.PORT || 8080;
 const app = express();
 
@@ -25,11 +26,13 @@ app.use(session({
 require("./routes/post-api-routes")(app);
 require("./routes/user-api-routes")(app);
 require("./routes/html-routes")(app);
-require("./routes/auth")(passport);
+const passportRote = require("./routes/auth")(passport);
 require("./passport")(passport);
 
+app.use('/auth', passportRote)
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+ });
