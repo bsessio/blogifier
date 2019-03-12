@@ -1,11 +1,11 @@
 var localstrategy=require("passport-local").Strategy;
 var db=require("./models")
-var user=model.User
+var user=db.User
 module.exports=function(passport){
-    passport.serialize(function(user,cb){
+    passport.serializeUser(function(user,cb){
         cb(null,user)
     })
-    passport.deserialize(function(user,cb){
+    passport.deserializeUser(function(user,cb){
         cb(null,user)
     })
     passport.use(new localstrategy(function(username,password,cb){
