@@ -24,6 +24,7 @@ app.use(session({
 // Import routes and give the server access to them.
 require("./routes/post-api-routes")(app);
 // require("./routes/post-api-routes")(app);
+require("./routes/html-routes")(app)
 require("./routes/auth")(passport)
 require("./passport")(passport)
 
