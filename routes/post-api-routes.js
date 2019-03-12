@@ -24,9 +24,14 @@ module.exports = function(app) {
         console.log(req.body);
         db.Post.create({
           name: req.body.name,
+<<<<<<< HEAD
           userId: user,
           location: req.body.location,
           blogPost: req.body.blogPost
+=======
+          location: req.body.locale,
+          blogPost: req.body.blog
+>>>>>>> 472653e51decdf63ab92ec24d878042d619e5dad
         })
           .then(function(dbPost) {
             res.json(dbPost);

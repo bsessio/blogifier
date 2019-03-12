@@ -62,7 +62,7 @@ $(document).ready(function() {
     return event;
   }
 
-        var $newsFeedContainer = $(".newsFeed"); 
+    var $newsFeedContainer = $(".newsFeed"); 
 
 //     // Our initial dbPost array
         var dbPost = [];
@@ -86,27 +86,52 @@ $(document).ready(function() {
       });
     }
 
-  ///create new row from 08
-   function blogFeed(event) {
-    event.preventDefault();
-    let blogAuthor = dbPost.name,
-      blogAuthorLocation = dbPost.locale,
-      blogBody = dbPost.blog;
+    var $newsFeedContainer = $(".newsFeed"); 
 
-    $(".newsFeed").prepend(
-      "<div class=`blogPost`>" +
-        "<div class=`blogHeader`>" +
-        "<div class=`blogAuthor`>" +
-        blogAuthor +
-        "</div>" +
-        "<div class=`blogAuthorLocation`>" +
-        blogAuthorLocation +
-        "</div>" +
-        "</div>" +
-        "<div class=`blogBody`>" +
-        blogBody +
-        "</div>" +
-    "</div>"
-    );
-  }
-});
+    //     // Our initial dbPost array
+            var dbPost = [];
+    //     // Getting dbPost from database when page loads
+            getdbPost();
+            
+    //     // This function resets the dbPost displayed with new dbPost from the database
+        function initializeRows() {
+          $blogPostContainer.empty();
+          var rowsToAdd = [];
+          for (var i = 0; i < dbPost.length; i++) {
+            rowsToAdd.push(createNewRow(dbPost[i]));
+          }      
+        }
+      
+    //     // This function grabs dbPost from the database and updates the view
+        function getdbPost() {
+          $.get("/api/posts", function(data) {
+            dbPost = data;
+            initializeRows();
+          });
+        }
+    
+      ///create new row from 08
+       function blogFeed(event) {
+        event.preventDefault();
+        let blogAuthor = dbPost.name,
+          blogAuthorLocation = dbPost.locale,
+          blogBody = dbPost.blog;
+    
+        $(".newsFeed").prepend(
+          "<div class=`blogPost`>" +
+            "<div class=`blogHeader`>" +
+            "<div class=`blogAuthor`>" +
+            blogAuthor +
+            "</div>" +
+            "<div class=`blogAuthorLocation`>" +
+            blogAuthorLocation +
+            "</div>" +
+            "</div>" +
+            "<div class=`blogBody`>" +
+            blogBody +
+            "</div>" +
+        "</div>"
+        );
+      }
+    });
+    

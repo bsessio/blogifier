@@ -25,16 +25,16 @@ module.exports=function(passport){
                 }
             }
         })
-    });
-    router.post("/login",passport.authenticate('local',{
-        failureRedirect:"/login",
-        successRedirect:"/"
-    }),function(req,res){
-        res.json(res)
-    })
-    router.get('/logout',function(req,res){
-        req.logout()
-        res.send("/")
-    })
-    return router;
-}
+    // });
+    // router.post("/login", passport.authenticate('local',{
+    //     failureRedirect:"/login",
+    //     successRedirect:"/"
+    // }),function(req,res){
+    //     res.json(res)
+    // })
+    // router.get('/logout',function(req,res){
+    //     req.logout()
+    //     res.send("/")
+    // })
+    // return router;
+    })}
