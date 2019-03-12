@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <!-- <script src="main.js"></script> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="icon" href="images/favicon.ico" sizes="16x16" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  </head>
+  <body>
+    <div style="text-align: center">
+      <img class="logo" src="images/bloglogo-bright.png" />
+    </div>
+    <div class="newsFeed">
+      <div class="formHandler">
+          <form action="register" id="register">
+        <label for="name">full name or a username</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder=" first and last name, or username"
+        />
+        <div class="spacer"></div>
+        <label for="address">city and state or country</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder=" city and state, or country"
+        />
+        <div class="spacer"></div>
+        <label for="password"> enter a password here </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder=" password"
+        />
+        <div class="spacer"></div>
+        <label for="confirmPassword"> confirm your password </label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder=" password"
+        />
+      </form>
+      <div class="spacer"></div>
+      <button type="submit" form="register" value="Submit">Register</button>
+    </div>
+    <div class="blogSide">
+      <div class="return">
+        <a href="index.html"
+          ><button class="newBlog">
+            Blogfeed
+          </button></a
+        >
+        <div class="spacer"></div>
+        <div class="makeBlog">
+            <a href="post.html"
+              ><button class="newBlog">
+                Submit a Blog
+              </button></a
+            >
+            <div class="spacer"></div>
+        <div class="login">
+            <a href="login.html"
+              ><button class="newBlog">
+                Log In / Log Out
+              </button></a
+            >
+          </div>
+      </div>
+      <div class="credits">
+        <p>
+          Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick,
+          Jonathan Hernandez, Tasha Shrader, Nick Arnold, and Drew Brooksbank.
+        </p>
+        <p>Blogifier is powered by MySQL and Passport.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

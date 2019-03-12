@@ -9,6 +9,19 @@ module.exports=function(passport){
         cb(null,user)
     })
     passport.use(new localstrategy(function(username,password,cb){
-        console.log(username,password)
+        user.findOne({username:username},function(err,data){
+            if(err)throw err;
+            if(data){
+                console.log(data)
+                var valid=data.comparePassword(password,data.password)
+                if(valid){
+                    cb(null,data)
+                }
+                else{
+                    console.log("not valid")
+                    cb(null,false)
+                }
+            }
+        })
     }))
 }
