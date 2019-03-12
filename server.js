@@ -18,12 +18,12 @@ const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
-require("./routes/api_routes")(app);
-require("./routes/api_routes.js")(app);
+//Import routes and give the server access to them.
+require("./routes/html-routes")(app);
 require("./routes/post-api-routes")(app);
-require("./routes/auth")(passport)
-require("./passport")(passport)
+//require("./routes/user-api-routes")(app);
+require("./routes/auth")(passport);
+//require("./passport")(passport);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
