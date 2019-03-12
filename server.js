@@ -1,6 +1,8 @@
+// require("dotenv").config()
 const express = require("express");
 var passport=require("passport");
 var session=require("express-session")
+var cookieParser=require('cookie-parser')
 const PORT = process.env.PORT || 8080;
 const app = express();
 
@@ -12,11 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(passport.initialize())
 app.use(passport.session())
-// Set Handlebars.
-const exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+app.use(require('cookie-parser')());
+app.use(session({
+  secret:"secretSauce",
+  saveUninitialized:false,
+  resave:false
+}))
 
 //Import routes and give the server access to them.
 require("./routes/html-routes")(app);
