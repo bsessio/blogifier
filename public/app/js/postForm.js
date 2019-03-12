@@ -30,7 +30,7 @@ $(document).ready(function() {
       function() {
         console.log("Created a new post from", name);
         // Reload the page to get the updated list
-        window.location.href = "/index";
+        window.location.href = "/";
       }
     );
   });
