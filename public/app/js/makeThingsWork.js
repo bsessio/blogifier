@@ -14,15 +14,28 @@
 
 // //   $(document).on("submit", "#blogPost", blogPost);
 
+//       let name = $("#name");
+//       let locale = $("#address");
+//       let password = $("#password");
+//       let blogPost = $("#blogPost");
+
 //   $("#postForm").on("submit", function(event) {
 //     // Make sure to preventDefault on a submit event.
 //     event.preventDefault();
-//       let name = $("#name").val().trim();
-//       let locale = $("#address").val().trim();
-//       let password = $("#password").val().trim();
-//       let blogPost = message;
-
+//     if (!name.val().trim() || !locale.val().trim() || !blogPost.val().trim()) {
+//         return;
+//       }
+//     // if (!name.val().trim() != 'something from Passport' || !password.val().trim() != 'something from Passport' ) {
+//     //     return;
+//     // } 
 //     // Send the POST request.
+
+//     let newBlogPost = {
+//         name: name.val().trim(),
+//         locale: locale.val().trim(),
+//         blog: blogPost.val().trim()
+//     };
+
 //     $.ajax("/api/posts/", {
 //       type: "POST",
 //       data: 
@@ -55,7 +68,7 @@
 //       blogAuthorLocation = "???",
 //       blogBody = $("blog");
 
-//     $(".blogpost").prepend(
+//     $(".newsFeed").prepend(
 //       "<div class=`blogPost`>" +
 //         "<div class=`blogHeader`>" +
 //         "<div class=`blogAuthor`>" +

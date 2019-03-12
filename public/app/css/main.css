@@ -33,7 +33,7 @@ textarea,
   background-color: rgb(213, 238, 255);
 }
 
-.newsFeed,
+.newsFeed, .basePage,
 input,
 .formHandler {
   margin: 0 auto;
@@ -87,7 +87,7 @@ a {
   border-radius: 1vw;
 }
 
-.newsFeed {
+.newsFeed, .basePage {
   width: 90%;
 }
 
