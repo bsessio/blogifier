@@ -3,7 +3,7 @@ var router=express.Router();
 var db=require("../models");
 var user= db.user;
 module.exports=function(passport){
-    router.post("/signup",function(req,res){
+    router.post("/api/register",function(req,res){
         var username=req.body.username,
             password=req.body.password;
             area=req.body.area;

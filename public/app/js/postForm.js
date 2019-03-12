@@ -14,11 +14,11 @@ $(document).ready(function() {
     //     return;
     // } 
     // Send the POST request.
-
+    let message = blog.val().trim().replace(/\n/g, "<br />");
     let newBlogPost = {
         name: name.val().trim(),
         locale: locale.val().trim(),
-        blog: blog.val().trim()
+        blog: message
     };
 
     console.log(newBlogPost);
