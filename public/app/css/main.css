@@ -1,4 +1,4 @@
-button,
+.newBlog,
 .blogHeader {
   background-color: #699ce9;
   font-weight: bold;
@@ -7,7 +7,7 @@ button,
   text-shadow: 1px 1px 3px rgb(53, 87, 105);
 }
 
-button,
+.newBlog,
 input,
 textarea,
 .blogHeader,
@@ -44,10 +44,13 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
-button {
+.newBlog {
   border-radius: 1vw;
   width: 10vw;
   height: 4.5vw;
+  line-height: 4.5vw;
+  vertical-align: middle;
+  text-align: center;
 }
 
 input {
@@ -60,10 +63,11 @@ textarea {
   border-radius: 2vw;
   margin: 1vw auto;
   display: block;
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 95%;
+  max-width: 95%;
   min-height: 75vh;
   max-height: 75vh;
+  padding: 1vw;
 }
 
 label {
