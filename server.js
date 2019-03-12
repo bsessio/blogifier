@@ -25,7 +25,7 @@ app.use(session({
 require("./routes/post-api-routes")(app);
 require("./routes/user-api-routes")(app);
 require("./routes/html-routes")(app);
-require("./routes/auth")(app);
+require("./routes/auth")(passport);
 require("./passport")(passport);
 
 // Start our server so that it can begin listening to client requests.
