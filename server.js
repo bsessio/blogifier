@@ -23,10 +23,10 @@ app.use(session({
 
 // Import routes and give the server access to them.
 require("./routes/post-api-routes")(app);
-// require("./routes/post-api-routes")(app);
-require("./routes/html-routes")(app)
-require("./routes/auth")(passport)
-require("./passport")(passport)
+require("./routes/user-api-routes")(app);
+require("./routes/html-routes")(app);
+require("./routes/auth")(app);
+require("./passport")(passport);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
