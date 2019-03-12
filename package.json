@@ -4,7 +4,8 @@
   "description": "Excitingly redundant blog site",
   "main": "index.js",
   "scripts": {
-    "test": "Blog away"
+    "test": "Blog away",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -32,5 +33,6 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^4.43.0"
-  }
+  },
+  "devDependencies": {}
 }
