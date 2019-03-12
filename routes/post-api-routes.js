@@ -24,8 +24,9 @@ module.exports = function(app) {
         console.log(req.body);
         db.Post.create({
           name: req.body.name,
-          location: req.body.locale,
-          blogPost: req.body.blog
+          UserID: req.body.UserID,
+          location: req.body.location,
+          blogPost: req.body.blogPost
         })
           .then(function(dbPost) {
             res.json(dbPost);

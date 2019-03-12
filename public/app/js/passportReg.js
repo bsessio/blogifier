@@ -22,7 +22,6 @@ $(document).ready(function() {
     };
 
     console.log(newRegister);
-    
     $.ajax("/auth/register", {
       type: "POST",
       data: newRegister
