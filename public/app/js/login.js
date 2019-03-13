@@ -25,7 +25,7 @@ $(document).ready(function() {
         console.log(res)
         console.log("Log In attempt for", username);
         // Reload the page to get the updated list
-        // window.location.href = "/";
+        window.location.href = "/";
       }
     );
   });

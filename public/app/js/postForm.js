@@ -7,19 +7,16 @@ $(document).ready(function() {
   $("#postForm").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-    if (!name.val().trim() || !locale.val().trim() || !blog.val().trim()) {
-        return;
-      }
+    // if (!name.val().trim() || !locale.val().trim() || !blog.val().trim()) {
+    //     return;
+    //   }
     // if (!name.val().trim() != 'something from Passport' || !password.val().trim() != 'something from Passport' ) {
     //     return;
     // } 
     // Send the POST request.
     let message = blog.val().trim().replace(/\n/g, "<br />");
     let newBlogPost = {
-        name: name.val().trim(),
-        location: locale.val().trim(),
         blogPost: message,
-        UserID: 'SuperUser'
     };
 
     console.log(newBlogPost);
