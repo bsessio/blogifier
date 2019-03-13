@@ -1,4 +1,5 @@
 var path = require("path");
+const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn
 
 // Routes
 // =============================================================
@@ -12,7 +13,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/app/index.html"));
   });
 
-  app.get("/post", function(req, res) {
+  app.get("/post",ensureLoggedIn(), function(req, res) {
     res.sendFile(path.join(__dirname, "../public/app/post.html"));
   });
 

@@ -2,10 +2,9 @@ $(document).ready(function() {
       let username = $("#name");
       let password = $("#password");
 
-  $("#apple").on("click", function(event) {
+  $("#login").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-    console.log("yoyo")
     if (!username.val().trim() || !password.val().trim()) {
         return;
     }
