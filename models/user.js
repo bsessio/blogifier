@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     username:{
         type:DataTypes.STRING,
         required:true,
-        unique:true,
+        unique:true
     },
     password:{
         type:DataTypes.STRING,
@@ -12,7 +12,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     area:{
       type:DataTypes.STRING,
-      
     }
 
   })

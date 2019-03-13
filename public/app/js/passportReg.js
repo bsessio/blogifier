@@ -22,8 +22,7 @@ $(document).ready(function() {
     };
 
     console.log(newRegister);
-
-    $.ajax("/api/register", {
+    $.ajax("/auth/register", {
       type: "POST",
       data: newRegister
     }).then(

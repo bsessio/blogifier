@@ -1,10 +1,13 @@
 .newBlog,
-.blogHeader {
+.blogHeader, #searchIcon {
   background-color: #699ce9;
   font-weight: bold;
   color: white;
-  font-size: 1.25vw;
   text-shadow: 1px 1px 3px rgb(53, 87, 105);
+}
+
+.newBlog, .blogHeader {
+  font-size: 1.25vw;
 }
 
 .newBlog,
@@ -12,7 +15,7 @@ input,
 textarea,
 .blogHeader,
 .blogBody,
-.formHandler {
+.formHandler, .searchSelect, .search-container {
   -webkit-box-shadow: 0 4px 4px -2px #1f4f85;
   -moz-box-shadow: 0 4px 4px -2px #1f4f85;
   box-shadow: 0 4px 4px -2px #1f4f85;
@@ -51,6 +54,8 @@ body {
   line-height: 4.5vw;
   vertical-align: middle;
   text-align: center;
+  text-transform: none;
+  font-size: 1.25vw;
 }
 
 input {
@@ -139,5 +144,52 @@ a {
 }
 
 .spacer {
+  clear: both;
   height: 1vw;
+}
+
+.searchbar, .search-container, .searchSelect {
+  display: block;
+  position: relative;
+  float: left;
+  font-size: 1vw;
+  border: none;
+}
+
+.searchbar {
+  width: 90%;
+  padding: .4vw;
+  margin-top: .5vw;
+  margin-right: .5vw;
+  font-size: 1vw;
+}
+
+.search-container {
+  width: 30%;
+  padding: 0.6vw 1vw;
+  margin-top: .5vw;
+  background: #699ce9;
+  border-radius: 0.5vw;
+}
+
+.searchSelect {
+  width: 63%;
+  padding: .6vw;
+  height: 2.4vw;
+  margin-top: .5vw;
+  margin-right: .5vw;
+}
+
+.search-container hover {
+  background: #ccc;
+}
+
+.searchbar-box {
+  width: 100%;
+  background-color: gray;
+}
+
+a {
+  text-transform: uppercase;
+  font-size: 12px;
 }

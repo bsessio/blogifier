@@ -17,8 +17,9 @@ $(document).ready(function() {
     let message = blog.val().trim().replace(/\n/g, "<br />");
     let newBlogPost = {
         name: name.val().trim(),
-        locale: locale.val().trim(),
-        blog: message
+        location: locale.val().trim(),
+        blogPost: message,
+        UserID: 'SuperUser'
     };
 
     console.log(newBlogPost);
