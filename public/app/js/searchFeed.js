@@ -37,7 +37,7 @@ $(document).ready(function() {
         function searchFeed() {
           $.get("/api/posts", function(data) {
             dbPost = data;
-            console.log ("Results:", dbPost[0].name);
+            // console.log ("Results:", dbPost[0].name);
             blogPosts();
           });
         }

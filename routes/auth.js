@@ -10,7 +10,7 @@ module.exports=function(passport){
         res.json(req.user)
     });
 
-    router.post("/register",function(req,res){
+    router.post("/register", function(req,res){
         console.log(req.body)
         var username=req.body.username,
             password=req.body.password;
