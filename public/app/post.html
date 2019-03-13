@@ -8,64 +8,101 @@
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
     <!-- <script src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <link rel="icon" href="/app/images/favicon.ico" sizes="16x16" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      href="/app/images/favicon.ico"
+      sizes="16x16"
+      type="image/png"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=PT+Sans"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" media="screen" href="/app/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/app/css/main.css"
+    />
   </head>
   <body>
     <div style="text-align: center">
       <img class="logo" src="/app/images/bloglogo-bright.png" />
     </div>
-    <div class="basePage">
-      <div class="formHandler">
-        <form action="/api/posts" id="postForm" method="post">
-          <label for="name">full name or a username</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder=" first and last name, or username"
-          />
-          <div class="spacer"></div>
-          <label for="address">city and state or country</label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            placeholder=" city and state, or country"
-          />
-          <textarea type="text" id="blog" name="blog"> </textarea>
-              <input type="submit" value="Submit"></input>
-        </form>
-      </div>
-      <div class="blogSide">
-        <div class="return">
-          <a href="/"
-            ><div class="newBlog">
-              Blogfeed
-            </div></a
-          >
-        </div>
-        <div class="spacer"></div>
-        <div class="login">
-          <a href="/login"
-            ><div class="newBlog">
-              Log In / Log Out
-            </div></a
-          >
-        </div>
-        <div class="credits">
-          <p>
-            Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick,
-            Jonathan Hernandez, Tasha Shrader, Nick Arnold, and Drew Brooksbank.
-          </p>
-          <p>Blogifier is powered by MySQL and Passport.</p>
+    <div class="searchFeed">
+      <div class="basePage">
+        <div class="formHandler">
+          <form action="/api/posts" id="postForm" method="post">
+            <label for="name">full name or a username</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder=" first and last name, or username"
+            />
+            <div class="spacer"></div>
+            <label for="address">city or state or country</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder=" city or state or country"
+            />
+            <textarea type="text" id="blog" name="blog"> </textarea>
+            <input type="submit" value="Submit" />
+          </form>
         </div>
       </div>
     </div>
+    <div class="blogSide">
+      <div class="searchbar-box">
+        <form action="/action_page.php">
+          <input
+            type="text"
+            class="searchbar"
+            placeholder="Search.."
+            name="search"
+          />
+          <select class="searchSelect">
+            <option value="name">Author</option>
+            <option value="location">Location</option>
+          </select>
+          <button type="submit" class="search-container">
+            <i class="fa fa-search" id="searchIcon"></i>
+          </button>
+        </form>
+      </div>
+      <div class="spacer"></div>
+      <div class="return">
+        <a href="/"
+          ><div class="newBlog">
+            Blogfeed
+          </div></a
+        >
+      </div>
+      <div class="spacer"></div>
+      <div class="login">
+        <a href="/login"
+          ><div class="newBlog">
+            Log In / Log Out
+          </div></a
+        >
+      </div>
+      <div class="credits">
+        <p>
+          Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick, Jonathan
+          Hernandez, Tasha Shrader, Nick Arnold, and Drew Brooksbank.
+        </p>
+        <p>Blogifier is powered by MySQL and Passport.</p>
+      </div>
+    </div>
     <script src="/app/js/postForm.js" type="text/javascript"></script>
+    <script src="/app/js/searchFeed.js" type="text/javascript"></script>
   </body>
 </html>
