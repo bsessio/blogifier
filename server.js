@@ -13,14 +13,15 @@ app.use(express.static("public"));
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(passport.initialize())
-app.use(passport.session())
-app.use(require('cookie-parser')());
+app.use(cookieParser());
 app.use(session({
   secret:"secretSauce",
   saveUninitialized:false,
   resave:false
 }))
+app.use(passport.initialize())
+app.use(passport.session());
+
 
 // Import routes and give the server access to them.
 require("./routes/post-api-routes")(app);
@@ -31,7 +32,7 @@ require("./passport")(passport);
 
 app.use('/auth', passportRote)
 // Start our server so that it can begin listening to client requests.
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

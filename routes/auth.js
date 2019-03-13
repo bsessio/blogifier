@@ -2,7 +2,14 @@ var express=require("express");
 var router=express();
 var db=require("../models");
 var User= db.User;
+const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn
+
 module.exports=function(passport){
+    router.get("/test",ensureLoggedIn(), function(req,res){
+        console.log("testing user")
+        res.json(req.user)
+    });
+
     router.post("/register",function(req,res){
         console.log(req.body)
         var username=req.body.username,
@@ -30,11 +37,10 @@ module.exports=function(passport){
             }
         })
     });
-    router.post("/login", passport.authenticate('local',{
-        failureRedirect:"/login",
-        successRedirect:"/"
-    }),function(req,res){
-        res.json(res)
+    router.post("/login", passport.authenticate('local'),function(req,res){
+        console.log(req.body)
+        console.log("yo")
+        res.json({success:(req.user? "Yes":"No"), user:req.user});
     })
     router.get('/logout',function(req,res){
         req.logout()

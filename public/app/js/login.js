@@ -2,9 +2,10 @@ $(document).ready(function() {
       let username = $("#name");
       let password = $("#password");
 
-  $("#login").on("submit", function(event) {
+  $("#apple").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
+    console.log("yoyo")
     if (!username.val().trim() || !password.val().trim()) {
         return;
     }
@@ -20,10 +21,11 @@ $(document).ready(function() {
       type: "POST",
       data: login
     }).then(
-      function() {
+      function(res) {
+        console.log(res)
         console.log("Log In attempt for", username);
         // Reload the page to get the updated list
-        window.location.href = "/login";
+        // window.location.href = "/";
       }
     );
   });
