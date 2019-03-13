@@ -43,7 +43,7 @@ input,
 }
 
 body {
-  background: rgb(176, 221, 250);
+  background: rgb(255, 255, 255);
   font-family: "PT Sans", sans-serif;
 }
 
@@ -192,4 +192,15 @@ a {
 a {
   text-transform: uppercase;
   font-size: 12px;
+}
+
+.verifier {
+  position: fixed;
+  top: 0;
+  left: 1vw;
+}
+
+.authname {
+  color: #285ba8;
+  font-weight: bolder;
 }

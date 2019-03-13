@@ -7,10 +7,29 @@ module.exports = function(app) {
 
     //get all the posts
     app.get("/api/posts/", function(req, res) {
-      db.Post.findAll().then(function(data){
+      db.Post.findAll({}).then(function(data){
         res.send(data)
       })
   });
+
+  app.get("/api/posts/:search/:category", function(req, res) {
+    search = req.params.search;
+    category = req.params.category;
+    if (category === 'name') {
+    db.Post.findAll({
+      where: {name: search}
+    }).then(function(data){
+      res.send(data)
+    })}
+    if (category === 'location') {
+      db.Post.findAll({
+        where: {location: search}
+      }).then(function(data){
+        res.send(data)
+      })  
+    }
+});
+
     //api route for saving a new post.
     app.post("/api/posts", function(req, res) {
         console.log(req.body);
