@@ -13,18 +13,19 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        
     })
     // This model needs a title, a body, and a category
     // Don't forget to 'return' the post after defining
-    Post.associate = function(models) {
-        // We're saying that a Post should belong to an Author
-        // A Post can't be created without an Author due to the foreign key constraint
-        Post.belongsTo(models.User, {
-          foreignKey: {
-            allowNull: false
-          }
-        });
-      };
+    // Post.associate = function(models) {
+    //     // We're saying that a Post should belong to an Author
+    //     // A Post can't be created without an Author due to the foreign key constraint
+    //     Post.belongsTo(models.User, {
+    //       foreignKey: {
+    //         allowNull: false
+    //       }
+    //     });
+    //   };
 
     return Post;
 };
