@@ -10,10 +10,10 @@ $(document).ready(function() {
     $searchFeed.empty();
     for (var i = 0; i < dbPost.length; i++) {
       let MySQL_date = dbPost[i].createdAt;
-      (blogAuthor = dbPost[i].name),
-        (blogAuthorLocation = dbPost[i].location),
-        (blogBody = dbPost[i].blogPost),
-        (blogDate = moment(MySQL_date, "YYYY-MM-DD mm:ss.sssZ").fromNow());
+        blogAuthor = dbPost[i].name,
+        blogAuthorLocation = dbPost[i].location,
+        blogBody = dbPost[i].blogPost,
+        blogDate = moment(MySQL_date, "YYYY-MM-DD").format('ll');
       $searchFeed.prepend(
         "<div class='blogPost'>" +
           "<div class='blogHeader'>" +
