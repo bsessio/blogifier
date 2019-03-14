@@ -21,8 +21,8 @@ $(document).ready(function() {
       data: login
     }).then(
       function(res) {
-        console.log(res)
-        console.log("Log In attempt for", username);
+        localStorage.setItem("user",username.val().trim())
+        $(".authname").text(res.username)
         // Reload the page to get the updated list
         window.location.href = "/";
       }

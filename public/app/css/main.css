@@ -36,14 +36,14 @@ textarea,
   background-color: rgb(213, 238, 255);
 }
 
-.newsFeed, .basePage,
+.newsFeed, .searchFeed, .basePage,
 input,
 .formHandler {
   margin: 0 auto;
 }
 
 body {
-  background: rgb(176, 221, 250);
+  background: rgb(255, 255, 255);
   font-family: "PT Sans", sans-serif;
 }
 
@@ -96,7 +96,7 @@ a {
   border-radius: 1vw;
 }
 
-.newsFeed, .basePage {
+.newsFeed, .searchFeed, .basePage {
   width: 90%;
 }
 
@@ -192,4 +192,18 @@ a {
 a {
   text-transform: uppercase;
   font-size: 12px;
+}
+
+.verifier {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding: 0 .5vw;
+  border-radius: 0vw 0vw 1vw 1vw;
+}
+
+.authname {
+  color: #285ba8;
+  font-weight: bolder;
 }
