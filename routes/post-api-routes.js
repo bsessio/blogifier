@@ -14,7 +14,6 @@ module.exports = function(app) {
   app.get("/api/posts/:category/:search", function(req, res) {
     search = req.params.search;
     category = req.params.category;
-    console.log(category);
 
     if (category == "name") {
       db.Post.findAll({
@@ -24,7 +23,6 @@ module.exports = function(app) {
       });
     }
     if (category == "location") {
-      console.log(search);
       db.Post.findAll({
         where: { location: search }
       }).then(function(data) {
@@ -35,8 +33,6 @@ module.exports = function(app) {
 
   //api route for saving a new post.
   app.post("/api/posts", function(req, res) {
-    console.log(req.body);
-    console.log("user", req.user);
     db.Post.create({
       name: req.user.username,
       location: req.user.area,

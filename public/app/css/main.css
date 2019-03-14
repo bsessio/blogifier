@@ -119,6 +119,14 @@ a {
   float: right;
 }
 
+.blogDate {
+  line-height: 1.75vw;
+  vertical-align: middle;
+  font-size: 0.75vw;
+  margin-left: 2vw;
+  float: left;
+}
+
 .blogBody {
   padding: 3vw;
   border-radius: 0 0 2vw 2vw;
