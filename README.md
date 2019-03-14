@@ -46,7 +46,7 @@ https://blogifier.herokuapp.com/
 ![login](https://github.com/medcoguy/GitTesting/blob/master/images/login.png)
 
 
-##video
+## video
 ![video](https://github.com/medcoguy/GitTesting/blob/master/images/videodisplay.gif)
 
 
