@@ -13,7 +13,7 @@ $(document).ready(function() {
               blogAuthor = dbPost[i].name,
               blogAuthorLocation = dbPost[i].location,
               blogBody = dbPost[i].blogPost,
-              blogDate = moment(MySQL_date, "YYYY-MM-DD mm:ss.sssZ").fromNow();
+              blogDate = moment(MySQL_date, "YYYY-MM-DD mm:ss.sssZ");
               $newsFeed.prepend("<div class='blogPost'>" +
               "<div class='blogHeader'>" +
               "<div class='blogAuthor'>" +
