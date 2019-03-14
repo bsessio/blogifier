@@ -1,5 +1,5 @@
 var path = require("path");
-
+const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn
 // Routes
 // =============================================================
 module.exports = function(app) {
