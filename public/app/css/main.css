@@ -36,7 +36,7 @@ textarea,
   background-color: rgb(213, 238, 255);
 }
 
-.newsFeed, .basePage,
+.newsFeed, .searchFeed, .basePage,
 input,
 .formHandler {
   margin: 0 auto;
@@ -96,7 +96,7 @@ a {
   border-radius: 1vw;
 }
 
-.newsFeed, .basePage {
+.newsFeed, .searchFeed, .basePage {
   width: 90%;
 }
 
@@ -197,7 +197,10 @@ a {
 .verifier {
   position: fixed;
   top: 0;
-  left: 1vw;
+  left: 0;
+  background-color: white;
+  padding: 0 .5vw;
+  border-radius: 0vw 0vw 1vw 1vw;
 }
 
 .authname {
