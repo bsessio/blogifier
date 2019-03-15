@@ -1,3 +1,5 @@
+// Note to self: https://www.youtube.com/watch?v=JL2rUwgmgdk
+
 $(document).ready(function() {
       let blogAuthor = '',
             blogAuthorLocation = '',

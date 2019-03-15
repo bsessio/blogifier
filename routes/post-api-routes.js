@@ -11,10 +11,13 @@ module.exports = function(app) {
     });
   });
 
+  // Get specific posts
   app.get("/api/posts/:category/:search", function(req, res) {
+    // Define params
     search = req.params.search;
     category = req.params.category;
 
+    // If using the Name category, search by name.
     if (category == "name") {
       db.Post.findAll({
         where: { name: search }
@@ -22,6 +25,7 @@ module.exports = function(app) {
         res.send(data);
       });
     }
+    // If using the Location category, search by location.
     if (category == "location") {
       db.Post.findAll({
         where: { location: search }

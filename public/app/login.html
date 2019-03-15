@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Log In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
-    <!-- <script src="main.js"></script> -->
+
+    <!-- So many scripts for styles and fonts and logos and stuff. We'll pop out only what code differs from INDEX below.-->
     <script src="https://code.jquery.com/jquery.js"></script>
     <link
       rel="stylesheet"
@@ -38,9 +38,13 @@
     <div style="text-align: center">
       <img class="logo" src="/app/images/bloglogo-bright.png" />
     </div>
+    <!-- We call it basePage so we don't overwrite clumsily under any circumstances. -->
     <div class="basePage">
+      <!-- Surround the forms with specific styling. -->
       <div class="formHandler">
+        <!-- Initialize the form -->
         <form action="login" id="login">
+          <!-- Name -->
           <label for="name">full name or a username</label>
           <input
             type="text"
@@ -49,6 +53,7 @@
             placeholder=" first and last name, or username"
           />
           <div class="spacer"></div>
+          <!-- Password -->
           <label for="password"> enter a password here </label>
           <input
             type="password"
@@ -57,11 +62,14 @@
             placeholder=" password"
           />
           <div class="spacer"></div>
+          <!-- Log In submit button -->
           <button type="submit" form="login" class="newBlog" value="Submit">
             Log In
           </button>
         </form>
+        <!-- Error Alert div, to notify the user of issues with log ins. -->
         <div class="errorAlert"></div>
+        <!-- Link to the Registration page! -->
         <p>
           If you have not yet set up an account, please
           <a href="/register">click here to register an account</a>.
@@ -117,6 +125,7 @@
         </div>
       </div>
     </div>
+    <!-- Log In specific JS Scripts. -->
     <script src="/app/js/login.js" type="text/javascript"></script>
     <script src="/app/js/searchFeed.js" type="text/javascript"></script>
   </body>

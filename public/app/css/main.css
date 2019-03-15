@@ -1,3 +1,8 @@
+/* =================================================== */
+/* GROUPED ELEMENTS  */
+/* =================================================== */
+
+/* Making all 'buttons' (newBlog and searchIcon) and headers have appropriate shadows and fonts. */
 .newBlog,
 .blogHeader, #searchIcon {
   background-color: #699ce9;
@@ -6,10 +11,12 @@
   text-shadow: 1px 1px 3px rgb(53, 87, 105);
 }
 
+/* Sizing for newBlog buttons and blogHeader fonts. */
 .newBlog, .blogHeader {
   font-size: 1.25vw;
 }
 
+/* The cool faint shadow that goes on EVERYTHING */
 .newBlog,
 input,
 textarea,
@@ -21,49 +28,63 @@ textarea,
   box-shadow: 0 4px 4px -2px #1f4f85;
 }
 
+/* Pushes text on the blog header stuff to the right. */
 .blogAuthor,
 .blogAuthorLocation {
   text-align: right;
 }
 
+/* Centers text for the forms, and return button. */
 .return,
 .formHandler {
   text-align: center;
 }
 
+/* Adds background colors for all the Big Fields. */
 .blogBody,
 .formHandler {
   background-color: rgb(213, 238, 255);
 }
 
+/* Centers a bunch of our elements. */
 .newsFeed, .searchFeed, .basePage,
 input,
 .formHandler {
   margin: 0 auto;
 }
 
+/* Does some float fiddling to make the search thing sit right */
+.searchbar, .search-container, .searchSelect {
+  display: block;
+  position: relative;
+  float: left;
+  font-size: 1vw;
+  border: none;
+}
+
+/* Makes the standard page elements the same width for every page */
+.newsFeed, .searchFeed, .basePage {
+  width: 90%;
+}
+
+/* =================================================== */
+/*   BASE ELEMENTS   */
+/* =================================================== */
+
+/* Sets the background white, sets font style */
 body {
   background: rgb(255, 255, 255);
   font-family: "PT Sans", sans-serif;
 }
 
-.newBlog {
-  border-radius: 1vw;
-  width: 10vw;
-  height: 4.5vw;
-  line-height: 4.5vw;
-  vertical-align: middle;
-  text-align: center;
-  text-transform: none;
-  font-size: 1.25vw;
-}
-
+/* Makes the input look cooler */
 input {
   border-radius: 0.5vw;
   width: 50%;
   height: 1.5vw;
 }
 
+/* Makes the textarea look rounded and hardsets its width and height */
 textarea {
   border-radius: 2vw;
   margin: 1vw auto;
@@ -75,15 +96,36 @@ textarea {
   padding: 1vw;
 }
 
+/* Makes labels behave better for styling. */
 label {
   display: inline-block;
   margin: 0.25vw;
 }
 
+/* Removes underlines from links, makes them default uppercase and a smaller font size. */
 a {
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
+/* =================================================== */
+/*  CUSTOM CLASSES   */
+/* =================================================== */
+
+/* This Makes Buttons! Or, fake buttons, really, but who's asking? */
+.newBlog {
+  border-radius: 1vw;
+  width: 10vw;
+  height: 4.5vw;
+  line-height: 4.5vw;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: none;
+  font-size: 1.25vw;
+}
+
+/* The sidebar for all the pages, fixed to the side and pretty. */
 .blogSide {
   position: fixed;
   top: 0.5vw;
@@ -96,14 +138,12 @@ a {
   border-radius: 1vw;
 }
 
-.newsFeed, .searchFeed, .basePage {
-  width: 90%;
-}
-
+/* Controls the width of the blogpost itself. */
 .blogPost {
   width: 85%;
 }
 
+/* Controls the blogheader, making it look sharp on bottom and round on top, aligning, font-sizing */
 .blogHeader {
   border-radius: 1vw 1vw 0 0;
   padding: 1vw 1vw 2vw 1vw;
@@ -111,14 +151,17 @@ a {
   font-size: 1.5vw;
 }
 
+/* moves author name to the left. */
 .blogAuthor {
   float: left;
 }
 
+/* moves author location to the right. */
 .blogAuthorLocation {
   float: right;
 }
 
+/* positions post date. */
 .blogDate {
   line-height: 1.75vw;
   vertical-align: middle;
@@ -127,16 +170,19 @@ a {
   float: left;
 }
 
+/* makes blog post curved on bottom, pointed on type, positions */
 .blogBody {
   padding: 3vw;
   border-radius: 0 0 2vw 2vw;
   margin-bottom: 4vw;
 }
 
+/* Fixes the logo size */
 .logo {
   width: 50vw;
 }
 
+/* subdues and affixes thhe credits */
 .credits {
   bottom: 0;
   position: absolute;
@@ -145,25 +191,20 @@ a {
   color: rgb(100, 99, 99);
 }
 
+/* Adds appropriate dimensions to the form container. */
 .formHandler {
   width: 65%;
   padding: 1vw 3vw;
   border-radius: 2vw;
 }
 
+/* A little spacer / clear fixer. Definitely my crappiest piece of code. */
 .spacer {
   clear: both;
   height: 1vw;
 }
 
-.searchbar, .search-container, .searchSelect {
-  display: block;
-  position: relative;
-  float: left;
-  font-size: 1vw;
-  border: none;
-}
-
+/* defines the search field holder */
 .searchbar {
   width: 90%;
   padding: .4vw;
@@ -172,6 +213,7 @@ a {
   font-size: 1vw;
 }
 
+/* encompasses in all the search elements */
 .search-container {
   width: 30%;
   padding: 0.6vw 1vw;
@@ -180,6 +222,7 @@ a {
   border-radius: 0.5vw;
 }
 
+/* defines the location/name selection drop downs */
 .searchSelect {
   width: 63%;
   padding: .6vw;
@@ -188,20 +231,18 @@ a {
   margin-right: .5vw;
 }
 
+/* turns the search icon gray when mousing over. */
 .search-container hover {
   background: #ccc;
 }
 
+/* width fixes the searchbar to fill its space */
 .searchbar-box {
   width: 100%;
   background-color: gray;
 }
 
-a {
-  text-transform: uppercase;
-  font-size: 12px;
-}
-
+/* styles and fixes the 'hello, _____' text in the top left which identifies user */
 .verifier {
   position: fixed;
   top: 0;
@@ -211,6 +252,7 @@ a {
   border-radius: 0vw 0vw 1vw 1vw;
 }
 
+/* styles the specific name seen in the ____ text in the top left identifying the user */
 .authname {
   color: #285ba8;
   font-weight: bolder;

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Blog Post</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
-    <!-- <script src="main.js"></script> -->
+
+    <!-- So many scripts for styles and fonts and logos and stuff. We'll pop out only what code differs from INDEX below.-->
     <script src="https://code.jquery.com/jquery.js"></script>
     <link
       rel="stylesheet"
@@ -38,10 +38,15 @@
     <div style="text-align: center">
       <img class="logo" src="/app/images/bloglogo-bright.png" />
     </div>
+    <!-- We call it basePage instead of newsFeed here, since we never want it overwritten. -->
     <div class="basePage">
+      <!-- Formhandler made for our post form. -->
       <div class="formHandler">
+        <!-- Begin form for this request. -->
         <form action="/api/posts" id="postForm" method="post">
+          <!-- Big ol' text field for the blog. -->
           <textarea type="text" id="blog" name="blog"> </textarea>
+          <!-- Submit button to send the data. -->
           <input type="submit" class="newBlog" value="Submit" />
         </form>
       </div>
@@ -61,7 +66,6 @@
           </select>
           <button type="submit" class="search-container">
             <i class="fa fa-search" id="searchIcon"></i>
-            <!-- <i class="fa fa-search" style="background-color:#699ce9; color:#fff; text-shadow: 1px 1px 3px "></i> -->
           </button>
         </form>
       </div>
@@ -87,6 +91,7 @@
         <p>Blogifier is powered by MySQL and Passport.</p>
       </div>
     </div>
+    <!-- Post specific JS -->
     <script src="/app/js/postForm.js" type="text/javascript"></script>
     <script src="/app/js/searchFeed.js" type="text/javascript"></script>
   </body>

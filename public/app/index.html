@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Blogifier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- So many scripts for styles and fonts and logos and stuff. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <link
       rel="stylesheet"
@@ -29,59 +31,71 @@
       media="screen"
       href="/app/css/main.css"
     />
-    <!-- <script src="main.js"></script> -->
   </head>
   <body>
+    <!-- Div class for an identifier to show your logged in status -->
     <div class="verifier">
+      <!-- Span class drilled down to give you a nice color highlight. -->
       <p>Hello, <span class="authname"></span>!</p>
     </div>
+    <!-- Center our logo, thanks. -->
     <div style="text-align: center">
       <img class="logo" src="/app/images/bloglogo-bright.png" />
     </div>
-    <div class="newsFeed">
-      <div class="blogPost">
-      </div>
-    </div>
+    <!-- A news feed we can write into the div of with our database. -->
+    <div class="newsFeed"></div>
+    <!-- Sidebar! -->
     <div class="blogSide">
+      <!-- Searchbar container, whhich holds so much divving. -->
       <div class="searchbar-box">
+        <!-- A form we're building -->
         <form id="search_feed">
+          <!-- Search field for you to type anything -->
           <input
             type="text"
             class="searchbar"
             placeholder="Search.."
             name="search"
           />
+          <!-- Drop down list of categories you might be searching -->
           <select class="searchSelect">
             <option value="name">Author</option>
             <option value="location">Location</option>
           </select>
+          <!-- The little search icon which is a button. -->
           <button type="submit" class="search-container">
             <i class="fa fa-search" id="searchIcon"></i>
-            <!-- <i class="fa fa-search" style="background-color:#699ce9; color:#fff; text-shadow: 1px 1px 3px "></i> -->
           </button>
         </form>
       </div>
+      <!-- Our stupid spacer / clearfix, these'll pop back in -->
       <div class="spacer"></div>
+      <!-- New blog button -->
       <a href="/post"
         ><div class="newBlog">
           Submit a Blog
         </div></a
       >
+      <!-- spacer -->
       <div class="spacer"></div>
+      <!-- Login / Logout button -->
       <div class="login">
         <div class="newBlog">
-            Log In / Log Out
-          </div>
-        <div class="spacer"></div>
-        <div class="credits">
-          <p>
-            Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick,
-            Jonathan Hernandez, Tasha Shrader, Nick Arnold, and Drew Brooksbank.
-          </p>
-          <p>Blogifier is powered by MySQL and Passport.</p>
+          Log In / Log Out
         </div>
       </div>
+      <!-- Ugh spacer -->
+      <div class="spacer"></div>
+      <!-- Roll our credits! -->
+      <div class="credits">
+        <p>
+          Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick, Jonathan
+          Hernandez, Tasha Shrader, Nick Arnold, and Drew Brooksbank.
+        </p>
+        <p>Blogifier is powered by MySQL and Passport.</p>
+      </div>
     </div>
+    <!-- Our custom handler scripts! -->
     <script src="/app/js/blogFeed.js" type="text/javascript"></script>
     <script src="/app/js/searchFeed.js" type="text/javascript"></script>
   </body>
