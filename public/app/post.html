@@ -32,37 +32,23 @@
     />
   </head>
   <body>
+    <div class="verifier">
+      <p>Hello, <span class="authname"></span>!</p>
+    </div>
     <div style="text-align: center">
       <img class="logo" src="/app/images/bloglogo-bright.png" />
     </div>
-    <div class="searchFeed">
-      <div class="basePage">
-        <div class="formHandler">
-          <form action="/api/posts" id="postForm" method="post">
-            <label for="name">full name or a username</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder=" first and last name, or username"
-            />
-            <div class="spacer"></div>
-            <label for="address">city or state or country</label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder=" city or state or country"
-            />
-            <textarea type="text" id="blog" name="blog"> </textarea>
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+    <div class="basePage">
+      <div class="formHandler">
+        <form action="/api/posts" id="postForm" method="post">
+          <textarea type="text" id="blog" name="blog"> </textarea>
+          <input type="submit" class="newBlog" value="Submit" />
+        </form>
       </div>
     </div>
     <div class="blogSide">
       <div class="searchbar-box">
-        <form action="/action_page.php">
+        <form id="search_feed">
           <input
             type="text"
             class="searchbar"
@@ -75,6 +61,7 @@
           </select>
           <button type="submit" class="search-container">
             <i class="fa fa-search" id="searchIcon"></i>
+            <!-- <i class="fa fa-search" style="background-color:#699ce9; color:#fff; text-shadow: 1px 1px 3px "></i> -->
           </button>
         </form>
       </div>
@@ -88,11 +75,9 @@
       </div>
       <div class="spacer"></div>
       <div class="login">
-        <a href="/login"
-          ><div class="newBlog">
+        <div class="newBlog">
             Log In / Log Out
-          </div></a
-        >
+          </div>
       </div>
       <div class="credits">
         <p>

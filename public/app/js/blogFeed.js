@@ -1,50 +1,42 @@
 $(document).ready(function() {
-//   // Getting references to the name input and author container, as well as the table body
-    let blogAuthor = '',
-          blogAuthorLocation = '',
-          blogBody = '';
-    var $newsFeed = $(".newsFeed"); 
-
-//     // Our initial dbPost array
-        var dbPost = [];
-//     // Getting dbPost from database when page loads
-        blogFeed();
-            
-    //     // This function resets the dbPost displayed with new dbPost from the database
-        function blogPosts() {
-          $newsFeed.empty();
-          for (var i = 0; i < dbPost.length; i++) {
-            blogAuthor = dbPost[i].name;
-            blogAuthorLocation = dbPost[i].location;
-            blogBody = dbPost[i].blogPost;  
-            $newsFeed.prepend("<div class='blogPost'>" +
-            "<div class='blogHeader'>" +
-            "<div class='blogAuthor'>" +
-            blogAuthor +
-            "</div>" +
-            "<div class='blogAuthorLocation'>" +
-            blogAuthorLocation +
-            "</div>" +
-            "</div>" +
-            "<div class='blogBody'>" +
-            blogBody +
-            "</div>" +
-        "</div>")
-          }      
-        }
-      
-    //     // This function grabs dbPost from the database and updates the view
-        function blogFeed() {
-          $.get("/api/posts", function(data) {
-            dbPost = data;
-            console.log(dbPost);
-            console.log ("Results:", dbPost[0].name);
-            blogPosts();
-          });
-        }
-   
-
-       return "Sup.";
-
-    //  blogPosts();
-   })
+      let blogAuthor = '',
+            blogAuthorLocation = '',
+            blogBody = '',
+            blogDate = '',
+            $newsFeed = $(".newsFeed"), 
+            dbPost = [];
+          blogFeed();
+          function blogPosts() {
+            $newsFeed.empty();
+            for (var i = 0; i < dbPost.length; i++) {
+              let MySQL_date = dbPost[i].createdAt;
+              blogAuthor = dbPost[i].name,
+              blogAuthorLocation = dbPost[i].location,
+              blogBody = dbPost[i].blogPost,
+              blogDate = moment(MySQL_date, "YYYY-MM-DD mm:ss.sssZ").fromNow();
+              $newsFeed.prepend("<div class='blogPost'>" +
+              "<div class='blogHeader'>" +
+              "<div class='blogAuthor'>" +
+              blogAuthor +
+              "</div>" +
+              "<div class='blogDate'>"+
+              blogDate+
+              "</div>" +
+              "<div class='blogAuthorLocation'>" +
+              blogAuthorLocation +
+              "</div>" +
+              "</div>" +
+              "<div class='blogBody'>" +
+              blogBody +
+              "</div>" +
+          "</div>")
+            }      
+          }
+          function blogFeed() {
+            $.get("/api/posts", function(data) {
+              dbPost = data;
+              blogPosts();
+            });
+          }
+         return;
+     })

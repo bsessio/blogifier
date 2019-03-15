@@ -32,41 +32,45 @@
     />
   </head>
   <body>
+    <div class="verifier">
+      <p>Hello, <span class="authname"></span>!</p>
+    </div>
     <div style="text-align: center">
       <img class="logo" src="/app/images/bloglogo-bright.png" />
     </div>
-    <div class="searchFeed">
-      <div class="basePage">
-        <div class="formHandler">
-          <form action="login" id="login">
-            <label for="name">full name or a username</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder=" first and last name, or username"
-            />
-            <div class="spacer"></div>
-            <label for="password"> enter a password here </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder=" password"
-            />
-            <div class="spacer"></div>
-            <button type="submit" form="login" value="Submit">Log In</button>
-          </form>
-          <p>
-            If you have not yet set up an account, please
-            <a href="/register">click here to register an account</a>.
-          </p>
-        </div>
+    <div class="basePage">
+      <div class="formHandler">
+        <form action="login" id="login">
+          <label for="name">full name or a username</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder=" first and last name, or username"
+          />
+          <div class="spacer"></div>
+          <label for="password"> enter a password here </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder=" password"
+          />
+          <div class="spacer"></div>
+          <button type="submit" form="login" class="newBlog" value="Submit">
+            Log In
+          </button>
+        </form>
+        <div class="errorAlert"></div>
+        <p>
+          If you have not yet set up an account, please
+          <a href="/register">click here to register an account</a>.
+        </p>
       </div>
     </div>
     <div class="blogSide">
       <div class="searchbar-box">
-        <form action="/action_page.php">
+        <form id="search_feed">
           <input
             type="text"
             class="searchbar"
@@ -79,6 +83,7 @@
           </select>
           <button type="submit" class="search-container">
             <i class="fa fa-search" id="searchIcon"></i>
+            <!-- <i class="fa fa-search" style="background-color:#699ce9; color:#fff; text-shadow: 1px 1px 3px "></i> -->
           </button>
         </form>
       </div>
@@ -97,11 +102,9 @@
         >
         <div class="spacer"></div>
         <div class="login">
-          <a href="/login"
-            ><div class="newBlog">
+        <div class="newBlog">
               Log In / Log Out
-            </div></a
-          >
+            </div>
           <div class="credits">
             <p>
               Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick,

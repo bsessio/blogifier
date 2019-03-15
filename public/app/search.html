@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Registration</title>
+    <title>Blog Post</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
-    <!-- <script src="main.js"></script> -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery.js"></script>
     <link
       rel="icon"
       href="/app/images/favicon.ico"
@@ -30,6 +29,7 @@
       media="screen"
       href="/app/css/main.css"
     />
+    <!-- <script src="main.js"></script> -->
   </head>
   <body>
     <div class="verifier">
@@ -38,48 +38,7 @@
     <div style="text-align: center">
       <img class="logo" src="/app/images/bloglogo-bright.png" />
     </div>
-    <div class="basePage">
-      <div class="formHandler">
-        <form action="register" id="register">
-          <label for="name">full name or a username</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder=" first and last name, or username"
-          />
-          <div class="spacer"></div>
-          <label for="address">city and state or country</label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            placeholder=" city and state, or country"
-          />
-          <div class="spacer"></div>
-          <label for="password"> enter a password here </label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder=" password"
-          />
-          <div class="spacer"></div>
-          <label for="confirmPassword"> confirm your password </label>
-          <input
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            placeholder=" password"
-          />
-        </form>
-        <div class="spacer"></div>
-        <button type="submit" form="register" class="newBlog" value="Submit">
-          Register
-        </button>
-        <div class="errorAlert"></div>
-      </div>
-    </div>
+    <div class="searchFeed"></div>
     <div class="blogSide">
       <div class="searchbar-box">
         <form id="search_feed">
@@ -100,12 +59,6 @@
         </form>
       </div>
       <div class="spacer"></div>
-      <a href="/"
-        ><div class="newBlog">
-          Blogfeed
-        </div></a
-      >
-      <div class="spacer"></div>
       <a href="/post"
         ><div class="newBlog">
           Submit a Blog
@@ -116,16 +69,17 @@
         <div class="newBlog">
             Log In / Log Out
           </div>
-      </div>
-      <div class="credits">
-        <p>
-          Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick, Jonathan
-          Hernandez, Tasha Shrader, Nick Arnold, and Drew Brooksbank.
-        </p>
-        <p>Blogifier is powered by MySQL and Passport.</p>
+        <div class="spacer"></div>
+        <div class="credits">
+          <p>
+            Blogifier™️ ©️️ was designed by Bowie Sessions, Dave Farnick,
+            Jonathan Hernandez, Tasha Shrader, Nick Arnold, and Drew Brooksbank.
+          </p>
+          <p>Blogifier is powered by MySQL and Passport.</p>
+        </div>
       </div>
     </div>
-    <script src="/app/js/passportReg.js" type="text/javascript"></script>
+    <script src="/app/js/searchPage.js" type="text/javascript"></script>
     <script src="/app/js/searchFeed.js" type="text/javascript"></script>
   </body>
 </html>
