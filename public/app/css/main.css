@@ -177,6 +177,11 @@ a {
   margin-bottom: 4vw;
 }
 
+/* set image dimensions
+.blogBody img {
+  max-width: 100%;
+}
+
 /* Fixes the logo size */
 .logo {
   width: 50vw;
