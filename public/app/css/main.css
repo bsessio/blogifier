@@ -175,6 +175,7 @@ a {
   padding: 3vw;
   border-radius: 0 0 2vw 2vw;
   margin-bottom: 4vw;
+  white-space: break-spaces;
 }
 
 /* set image dimensions
